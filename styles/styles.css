@@ -95,30 +95,34 @@ body {
 			calc(100% + 47rem) calc(100% + 42rem);
 	}
 }
-@media only screen and (min-device-width: 1000px) and (max-device-width: 1440px) {
+/* @media only screen and (min-width: 376px) and (max-width: 500px) {
 	body {
-		background-position: calc(100% - 35rem) calc(100% - 16rem),
-			calc(100% + 28rem) calc(100% + 42rem);
-		transition: 3s, cubic-bezier(1, 0, 0, 1);
-		/* -16rem -34rem, 46rem 20rem; */
+		background-position: calc(100% - 11rem) calc(100% - 22rem),
+			calc(100% + 48rem) calc(100% + 36rem);
+	}
+} */
+@media only screen and (min-width: 376px) and (max-width: 749px) {
+	body {
+		background-position: calc(100% - 11rem) calc(100% - 22rem),
+			calc(100% + 48rem) calc(100% + 36rem);
 	}
 }
 @media only screen and (min-width: 750px) and (max-width: 999px) {
 	body {
 		background-position: calc(100% - 26rem) calc(100% - 16rem),
 			calc(100% + 35rem) calc(100% + 39rem);
-		/* -32rem -33rem, 36rem 17rem; */
 	}
 }
-@media only screen and (min-width: 1401px) and (max-device-width: 1600px) {
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1439px) {
+	body {
+		background-position: calc(100% - 31rem) calc(100% - 19rem),
+			calc(100% + 28rem) calc(100% + 38rem);
+	}
+}
+
+@media only screen and (min-width: 1440px) and (max-device-width: 1600px) {
 	body {
 		background-position: calc(100% - 43rem) calc(100% - 24rem),
 			calc(100% + 16rem) calc(100% + 40rem);
-	}
-}
-@media only screen and (min-width: 376px) and (max-width: 500px) {
-	body {
-		background-position: calc(100% - 16rem) calc(100% - 29rem),
-			calc(100% + 46rem) calc(100% + 32rem);
 	}
 }
