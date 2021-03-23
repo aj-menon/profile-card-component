@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	
 }
 :root {
 	/* Primary colors */
@@ -16,15 +17,9 @@ html {
 }
 body {
 	min-height: 100vh;
-	background: var(--dark-cyan) no-repeat fixed;
-	background-image: url(../images/bg-pattern-top.svg),
-		url(../images/bg-pattern-bottom.svg);
 
-	background-repeat: no-repeat, no-repeat;
-	background-position: calc(100% - 58rem) calc(100% - 25rem),
-		calc(100% + 1rem) calc(100% + 34rem);
-	/* -48rem -38rem, 9rem 19rem; */
-	/* background-position: -48rem -37rem, 8rem 9rem;     */
+	background: var(--dark-cyan) no-repeat fixed;
+	
 
 	font-size: 18px;
 	font-family: "Kumbh Sans", sans-serif;
@@ -32,17 +27,39 @@ body {
 	display: grid;
 	justify-content: space-around;
 	place-content: center;
+	overflow: hidden;
 }
 
+.bg-pattern-bottom,.bg-pattern-top{
+	position: absolute;
+}
+.bg-pattern-bottom{
+	 
+	z-index: -1;
+    top:8rem;
+    left: 8rem;
+	
+}
+.bg-pattern-top{
+
+    bottom:10rem;
+    right: 10rem;
+    z-index: -1
+	
+
+}
 .container {
 	max-width: 25rem;
 	min-height: 25rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: column;
+	/* justify-content: center; */
 	align-items: center;
 	background-color: white;
 	border-radius: 1rem;
+	 position: relative;
+	 top: 0;
+    left: 0;
 }
 .bg-top {
 	width: 100%;
@@ -52,6 +69,7 @@ body {
 .profile-img {
 	background-color: white;
 	border-radius: 3rem;
+	position: relative;
 	align-items: center;
 	display: flex;
 	justify-content: flex-start;
@@ -89,10 +107,15 @@ body {
 .stats h3 {
 	margin-bottom: 0;
 }
-@media only screen and (max-width: 375px) {
-	body {
+@media only screen and (max-width: 370px) {
+	/* body {
 		background-position: calc(100% - 11rem) calc(100% - 14rem),
 			calc(100% + 47rem) calc(100% + 42rem);
+	} */
+	
+	.container{
+    left: 0;
+    top: 0;
 	}
 }
 /* @media only screen and (min-width: 376px) and (max-width: 500px) {
@@ -101,28 +124,30 @@ body {
 			calc(100% + 48rem) calc(100% + 36rem);
 	}
 } */
-@media only screen and (min-width: 376px) and (max-width: 749px) {
-	body {
-		background-position: calc(100% - 11rem) calc(100% - 22rem),
-			calc(100% + 48rem) calc(100% + 36rem);
-	}
+ @media only screen and (min-width: 376px) and (max-width: 749px) {
+	
+	/* .container{
+left: 0;
+     top:0 ;
+	} */
 }
-@media only screen and (min-width: 750px) and (max-width: 999px) {
-	body {
-		background-position: calc(100% - 26rem) calc(100% - 16rem),
-			calc(100% + 35rem) calc(100% + 39rem);
+
+/* @media only screen and (min-width: 750px) and (max-width: 999px) {
+	.container{
+    left: -8rem;
+    top: -8rem;
 	}
 }
 @media only screen and (min-device-width: 1000px) and (max-device-width: 1439px) {
-	body {
-		background-position: calc(100% - 31rem) calc(100% - 19rem),
-			calc(100% + 28rem) calc(100% + 38rem);
+	.container{
+       left: -11rem;
+    top: -9rem;
 	}
 }
 
 @media only screen and (min-width: 1440px) and (max-device-width: 1600px) {
-	body {
-		background-position: calc(100% - 43rem) calc(100% - 24rem),
-			calc(100% + 16rem) calc(100% + 40rem);
+	.container{
+       left: -15rem;
+    top: -9rem;
 	}
-}
+}   */
